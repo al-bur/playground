@@ -7,4 +7,6 @@
 
 ## Reference
 
-![오타니 만다라트 사진](https://user-images.githubusercontent.com/64825713/228756012-b972fe87-43f5-4262-99ab-5f3cdf9b5c6c.png)
+- 오타니 쇼헤이의 만다라트
+<img src="https://user-images.githubusercontent.com/64825713/228756012-b972fe87-43f5-4262-99ab-5f3cdf9b5c6c.png"  width="300px" height="300px"/>
+
