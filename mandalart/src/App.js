@@ -5,11 +5,11 @@ import html2canvas from "html2canvas";
 
 const CENTER_INDEX = 4;
 
-const Cell = ({ index, gridIndex, center, datum, onBlur }) => {
+const Cell = ({ index, gridIndex, datum, onBlur, customClass }) => {
   return (
     <div
       contenteditable="true"
-      className={`cell${center ? " center" : ""}`}
+      className={`cell${customClass ? ` ${customClass}` : ""}`}
       id={`c${index + 1}`}
       onBlur={(e) => onBlur(e, gridIndex, index)}
     >
@@ -19,6 +19,16 @@ const Cell = ({ index, gridIndex, center, datum, onBlur }) => {
 };
 
 const Grid = ({ index, data, handleChangeCell }) => {
+  const getCustomCellClassname = (cellIndex) => {
+    if (cellIndex === CENTER_INDEX) {
+      if (index === CENTER_INDEX) return "center-grid-center-cell";
+
+      return "center-cell";
+    }
+
+    return null;
+  };
+
   return (
     <div className="grid">
       {data.map((_, i) => (
@@ -26,7 +36,7 @@ const Grid = ({ index, data, handleChangeCell }) => {
           key={i}
           index={i}
           gridIndex={index}
-          center={i === CENTER_INDEX && index === CENTER_INDEX}
+          customClass={getCustomCellClassname(i)}
           datum={data[i]}
           onBlur={handleChangeCell}
         />
@@ -77,8 +87,6 @@ const App = () => {
   useEffect(() => {
     saveCellsToLocalStorage();
   }, [saveCellsToLocalStorage]);
-
-  console.log(fullScreenRef.current);
 
   return (
     <div className="container" ref={fullScreenRef}>

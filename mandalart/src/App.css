@@ -49,7 +49,14 @@ h1 {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.center {
-  background-color: #4caf50;
+.center-grid-center-cell {
+  background-color: #1d9547;
   color: #fff;
+  font-weight: 700;
+}
+
+.center-cell {
+  font-weight: 700;
+  color: #fff;
+  background-color: #6ec58d;
 }
