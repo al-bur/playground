@@ -1,4 +1,5 @@
 # Mandalart (만다라트)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7e25f379-75db-4625-a599-991260ee1e07/deploy-status)](https://app.netlify.com/sites/make-your-own-mandalart/deploys)
 
 ## 왜 만들었는지?
 
