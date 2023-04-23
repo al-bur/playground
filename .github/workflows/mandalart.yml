@@ -1,0 +1,30 @@
+name: Project1 Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'mandalart/**'
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+
+    - name: Install dependencies
+      run: |
+        cd mandalart
+        npm ci
+
+    - name: Print success message
+      run: |
+        echo "GitHub Actions is working correctly!"
