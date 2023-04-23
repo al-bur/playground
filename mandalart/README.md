@@ -1,7 +1,7 @@
 # Mandalart (만다라트)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7e25f379-75db-4625-a599-991260ee1e07/deploy-status)](https://app.netlify.com/sites/make-your-own-mandalart/deploys)
 
-## 왜 만들었는지?!
+## 왜 만들었는지?
 
 - 오타니의 만다라트를 참고해서, 나도 해보고자 했었습니다.
 - 근데, 마땅히 사용할 수 있는 포맷이 없어서, 웹사이트로 만들 수 있도록 만다라트 웹사이트를 만들었습니다~
