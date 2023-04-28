@@ -11,7 +11,7 @@ function applyBlur() {
   sliderValue.textContent = blurAmount;
 
   if (img) {
-    ctx.filter = `blur(${blurAmount}px)`;
+    ctx.filter = `blur(${blurAmount / 10}px)`;
     ctx.drawImage(img, 0, 0, img.width, img.height);
   }
 }
@@ -42,3 +42,11 @@ download.addEventListener("click", () => {
 });
 
 blurSlider.addEventListener("input", applyBlur);
+
+const blurButtonGroup = document.querySelector("#blur-button-group");
+
+blurButtonGroup.addEventListener("click", (e) => {
+  const blurAmount = e.target.getAttribute("data-blur");
+  blurSlider.value = blurAmount;
+  applyBlur();
+});
