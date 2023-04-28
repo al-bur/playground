@@ -9,6 +9,7 @@
 ## lists
 
 - mandalart (만다라트 만들 수 있는 웹사이트)
+- make-blur (이미지를 블러 처리해주는 웹사이트)
 
 <br>
 
