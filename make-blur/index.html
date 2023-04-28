@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 블러 처리 및 다운로드</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <input type="file" id="upload" accept="image/*" />
+    <canvas id="canvas" class="canvas-container"></canvas>
+    <div>
+      <label for="blur-slider">블러 정도:</label>
+      <input
+        type="range"
+        id="blur-slider"
+        min="0"
+        max="50"
+        value="8"
+        step="1"
+      />
+      <span id="slider-value">8</span>
+      <span>px</span>
+    </div>
+    <button id="download">다운로드</button>
+
+    <script src="app.js"></script>
+  </body>
+</html>
