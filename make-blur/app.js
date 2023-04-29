@@ -5,6 +5,7 @@ const download = document.getElementById("download");
 const blurSlider = document.getElementById("blur-slider");
 const sliderValue = document.getElementById("slider-value");
 let img;
+let fileName;
 
 function applyBlur() {
   const blurAmount = blurSlider.value;
@@ -19,10 +20,12 @@ function applyBlur() {
 upload.addEventListener("change", (e) => {
   const file = e.target.files[0];
   const reader = new FileReader();
+  fileName = file.name;
 
   reader.onload = (event) => {
     img = new Image();
     img.src = event.target.result;
+    console.log(file, "file");
 
     img.onload = () => {
       canvas.width = img.width;
@@ -36,7 +39,7 @@ upload.addEventListener("change", (e) => {
 
 download.addEventListener("click", () => {
   const link = document.createElement("a");
-  link.download = "blurred-image.png";
+  link.download = "blur-" + fileName;
   link.href = canvas.toDataURL();
   link.click();
 });
